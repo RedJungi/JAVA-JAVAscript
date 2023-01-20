@@ -100,3 +100,21 @@ Scanner 객체 생성시 입력 스트림을 지정할 수 있음(키보드 이�
 입력값이 공백으로 구분되어 한줄로 입력될 경우 공백을 기준으로 다음 데이터를 찾게됨
 따라서 한줄 전체를 문자열 입력으로 처리하려면 nextLine()을 사용해야함
 hasNext() 는 다음 데이터가 있는지 true/false 로 알려줌
+
+{객체지향}
+
+클래스(Class)
+클래스는 객체를 정의하기 위한 틀로써 표현하고자 하는 객체들의 속성과 동작을 정의하고 있습니다.
+앞의 소나타 예에서 소나타는 Car 라고 하는 클래스로 정의할 수 있는 것
+
+class Car {
+    String color;
+    String model;
+    int power;
+
+    public void go() {
+    }
+
+    public void break() {
+    }
+}
