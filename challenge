@@ -128,7 +128,31 @@ class Car {
 슈퍼 클래스에서 물려 받은 메서드를 수정할 수 있다.(오버라이딩, Overriding)
 동일 슈퍼클래스를 상속하는 모든 서브클래스는 타입 호환이 된다.
 
+(오버라이딩)
+슈퍼클래스로 부터 상속받은 메서드를 다시 정의하는 것을 말합니다. 당연히 메서드의 이름과 리턴 타입, 인자등이 모두 동일해야 하며 다를 경우 새로운 메서드가 추가되는 형식이 된다.
+
+오버라이딩을 통해 객체지향의 특징중 하나인 다형성 구현이 가능해 집니다. 예를들어 애완동물 클래스가 있고 bark() 라는 메서드가 있다고 했을때 애안동물 클래스를 상속받는 강아지와 
+고양이 클래스를 만들경우 bark() 메서드의 오버라이딩을 통해 서로 다른 동작이 가능하게 할 수 있다.
+
 Class SubClass extends SuperClass {
 
+}
+
+class Pet {
+    void bark() {
+        System.out.println("pipi");
+    }
+}
+
+class Dog extends Pet {
+    void bark() {
+        System.out.println("woof woof");
+    }
+}
+
+class Cat extends Pet {
+        void bark() {
+        System.out.println("mew mew");
+    }
 }
 
