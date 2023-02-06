@@ -242,3 +242,28 @@ package com.my.study;
 class MyClass {
 
 }
+
+(package import)
+현재 구현중인 클래스에서 동일패키지에 있는 클래스가 아닌 다른 클래스(외부 라이브러리 등)를 사용하는 경우 반드시 import 문을 사용해 해당 클래스의 패키지를 명시해 주어야 한다.
+만일 import 문을 사용하지 않는다면 소스코드에서 해당 클래스 사용시 매번 클래스 이름 앞에 패키지명까지 붙여주어야 한다.
+
+class MyClass {
+ java.util.Scanner scan = new java.util.Scanner(System.in);   
+}
+
+대부분의 경우 매번 패키지명을 붙여주는 방식 보다는 해당 클래스의 패키지를 import 해주는 방법을 사용한다.
+
+import java.util.Scanner;
+
+class MyClass {
+    Scanner scan = new Scanner(System.in);
+}
+
+원칙적으로는 사용되는 모든 클래스를 import 해주는 것이며 특정 패키지의 모든 클래스를 한번에 import 하기 위해서는 다음과 같이 *을 사용하기도 한다.
+
+import java.util.*;
+
+그러나 이러한 방식은 많은 라이브러리를 동시에 사용하는 경우 클래스 이름 중복으로 인한 문제가 발생할 수 있으므로 주의해야 한다. 
+보통은 개발도구에서 자동으로 패키지 import 를 관리하므로 신경쓰지 말고 개별 클래스들이 import 될 수 있도록 하는 것이 좋다.
+
+실제 패키지는 디스크 상에는 디렉토리 개념으로 소스 폴더를 열어보면 com 폴더 아래 my 폴더가 있고 그아래 study 폴더에 자바 소스파일들이 위치한 것을 확인할 수 있다.
